@@ -48,6 +48,7 @@ function CartPage() {
                   <button
                     className={styles.quantityButton}
                     onClick={() => decreaseQuantity(item.comic.id)}
+                    type="button"
                   >
                     -
                   </button>
@@ -57,6 +58,7 @@ function CartPage() {
                   <button
                     className={styles.quantityButton}
                     onClick={() => increaseQuantity(item.comic.id)}
+                    type="button"
                   >
                     +
                   </button>
@@ -71,6 +73,7 @@ function CartPage() {
                 <button
                   className={styles.removeButton}
                   onClick={() => removeFromCart(item.comic.id)}
+                  type="button"
                 >
                   Remove
                 </button>
@@ -86,11 +89,9 @@ function CartPage() {
             Total Price: ${totalPrice.toFixed(2)}
           </p>
 
-          <Link to="/checkout" className={styles.checkoutLink}>
-            <button className={styles.checkoutButton}>
-              Proceed to Checkout
-            </button>
-          </Link>
+         <Link to="/checkout" className={styles.checkoutLink}>
+  Proceed to Checkout
+</Link>
         </div>
       </div>
     </div>
