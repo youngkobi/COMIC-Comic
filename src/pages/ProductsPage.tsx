@@ -8,9 +8,10 @@ const categories = ['All', 'Marvel', 'DC', 'Independent', 'Manga'];
 function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const filtered = activeCategory === 'All'
-    ? comics
-    : comics.filter((c) => c.category === activeCategory);
+  const filtered =
+    activeCategory === 'All'
+      ? comics
+      : comics.filter((c) => c.category === activeCategory);
 
   return (
     <div className={styles.container}>
@@ -18,20 +19,23 @@ function ProductsPage() {
         <h1 className={styles.title}>All Comics</h1>
       </div>
 
-      {/* Category Filters */}
       <div className={styles.filters}>
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={activeCategory === cat ? styles.filterBtnActive : styles.filterBtn}
+            className={
+              activeCategory === cat
+                ? styles.filterBtnActive
+                : styles.filterBtn
+            }
+            type="button"
           >
             {cat}
           </button>
         ))}
       </div>
 
-      {/* Comics Grid */}
       <div className={styles.grid}>
         {filtered.length === 0 ? (
           <p className={styles.noResults}>No comics found in this category.</p>
@@ -47,7 +51,8 @@ function ProductsPage() {
                 alt={comic.title}
                 className={styles.cardImage}
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://placehold.co/400x600?text=No+Cover';
+                  (e.target as HTMLImageElement).src =
+                    'https://placehold.co/400x600?text=No+Cover';
                 }}
               />
               <div className={styles.cardInfo}>

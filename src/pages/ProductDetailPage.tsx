@@ -33,7 +33,6 @@ function ProductDetailPage() {
       </Link>
 
       <div className={styles.product}>
-        {/* Image */}
         <div className={styles.imageWrapper}>
           <img
             src={comic.image}
@@ -46,7 +45,6 @@ function ProductDetailPage() {
           />
         </div>
 
-        {/* Details */}
         <div className={styles.details}>
           <span className={styles.category}>{comic.category}</span>
 
@@ -68,9 +66,15 @@ function ProductDetailPage() {
           {!comic.inStock ? (
             <p className={styles.outOfStock}>Out of Stock</p>
           ) : added ? (
-            <button className={styles.added}>✓ Added to Cart!</button>
+            <button className={styles.added} type="button">
+              ✓ Added to Cart!
+            </button>
           ) : (
-            <button className={styles.addToCart} onClick={handleAddToCart}>
+            <button
+              className={styles.addToCart}
+              onClick={handleAddToCart}
+              type="button"
+            >
               Add to Cart
             </button>
           )}
