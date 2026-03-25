@@ -1,0 +1,159 @@
+.hero {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-bottom: 4px solid red;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroButton {
+  background-color: red;
+  color: #1a1a2e;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.heroButton:hover {
+  background-color: #e6b800;
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  color: white;
+  border-left: 6px solid red;
+  padding-left: 1rem;
+}
+
+.comicsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.comicCard {
+  background-color: #ffffff;
+  border: 2px solid #1a1a2e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.comicCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.comicImage {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background-color: #e0e0e0;
+  display: block;
+}
+
+.comicInfo {
+  padding: 1rem;
+}
+
+.comicTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #1a1a2e;
+}
+
+.comicPrice {
+  font-size: 1rem;
+  font-weight: 900;
+  color: red;
+  background-color: #1a1a2e;
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.categories {
+  background-color: #1a1a2e;
+  padding: 3rem 2rem;
+   text-align: center;
+}
+
+.categoriesInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categoriesTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: red;
+  margin-bottom: 2rem;
+}
+
+.categoryButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categoryBtn {
+  background-color: transparent;
+  border: 2px solid red;
+  color: red;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.categoryBtn:hover {
+  background-color: red;
+  color: #1a1a2e;
+}
