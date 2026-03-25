@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid red;
+  position: relative;
 }
 
 .logo {
@@ -14,12 +15,15 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+  position: relative;
+  z-index: 20;
 }
 
 .navLinks {
   display: flex;
   gap: 2rem;
   list-style: none;
+  align-items: center;
 }
 
 .navLinks a {
@@ -56,4 +60,140 @@
   padding: 0.1rem 0.5rem;
   border-radius: 999px;
   margin-left: 0.3rem;
+}
+
+.burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+  padding: 0;
+}
+
+.burgerLine {
+  position: absolute;
+  left: 10px;
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.burgerLine:nth-child(1) {
+  top: 12px;
+}
+
+.burgerLine:nth-child(2) {
+  top: 20px;
+}
+
+.burgerLine:nth-child(3) {
+  top: 28px;
+}
+
+.line1Open {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.line2Open {
+  opacity: 0;
+}
+
+.line3Open {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .navLinks {
+    gap: 1.25rem;
+  }
+}
+
+/* phone */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .navLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    padding-left: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  }
+
+  .navLinksOpen {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 0.75rem;
+  }
+
+  .navLinks li {
+    width: 100%;
+  }
+
+  .navLinks a {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 0;
+    font-size: 0.95rem;
+  }
+
+  .cartLink {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+}
+
+/* small phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.9rem 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .navLinks a {
+    font-size: 0.85rem;
+  }
+
+  .cartBadge {
+    font-size: 0.68rem;
+  }
 }
